@@ -1,5 +1,7 @@
 # Edge Device ML Regression & Rule-Based System
 
+> 📖 **Read the Detailed Report:** For an in-depth understanding of the methodology, architecture, and results, please read the [ML Report](ML_Report.pdf) provided in this repository.
+
 This repository contains a high-precision machine learning pipeline designed to predict two continuous variables (`target01` and `target02`) under distinct constraints. The project involves predicting a bimodal target using advanced feature engineering and ensembling, as well as developing a lightweight, rule-based regression model tailored for resource-constrained edge devices without the use of external ML libraries.
 
 ## Project Overview
@@ -28,7 +30,8 @@ The second part addresses the constraint of deploying a predictive model on edge
 - `src/framework_7.py`: The standalone, pure-Python script predicting `target02` via piecewise polynomial equations.
 - `src/rule_extractor.py`: Utility script used to extract logical rules and equations for Part 2.
 - `notebooks/`: Exploratory Jupyter notebooks demonstrating the data discovery and feature engineering phases.
-- `reports/`: Includes the final project report (`ML Report.pdf`) and comprehensive visual analytics (KDE distributions, residual plots).
+- `ML_Report.pdf`: The detailed final project report containing full architecture, methodology, and performance analysis.
+- `reports/`: Includes comprehensive visual analytics (KDE distributions, residual plots) and draft documentation.
 - `data/`: Contains the datasets (`dataset_7.csv`, `target_7.csv`, `EVAL_7.csv`).
 
 ## Code Execution Instructions

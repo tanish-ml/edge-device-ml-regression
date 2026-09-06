@@ -24,11 +24,12 @@ The second part addresses the constraint of deploying a predictive model on edge
 
 ## Repository Structure
 
-- `ML_project_7/scr_code/part1_pipeline.py`: The full machine learning pipeline for predicting `target01` using PCA and CatBoost.
-- `ML_project_7/scr_code/framework_7.py`: The standalone, pure-Python script predicting `target02` via piecewise polynomial equations.
-- `ML_project_7/scr_code/rule_extractor.py`: Utility script used to extract logical rules and equations for Part 2.
-- `Part 1/` & `Part 2/`: Exploratory notebooks and data pipelines for both parts of the project.
-- `Report And resorces/`: Includes comprehensive visual analytics (KDE distributions, residual plots, feature flowcharts) and the original documentation.
+- `src/part1_pipeline.py`: The full machine learning pipeline for predicting `target01` using PCA and CatBoost.
+- `src/framework_7.py`: The standalone, pure-Python script predicting `target02` via piecewise polynomial equations.
+- `src/rule_extractor.py`: Utility script used to extract logical rules and equations for Part 2.
+- `notebooks/`: Exploratory Jupyter notebooks demonstrating the data discovery and feature engineering phases.
+- `reports/`: Includes the final project report (`ML Report.pdf`) and comprehensive visual analytics (KDE distributions, residual plots).
+- `data/`: Contains the datasets (`dataset_7.csv`, `target_7.csv`, `EVAL_7.csv`).
 
 ## Code Execution Instructions
 
@@ -42,20 +43,20 @@ pip install -r requirements.txt
 ### Running Part 1
 To train the regression model and generate predictions on the evaluation set:
 ```bash
-python ML_project_7/scr_code/part1_pipeline.py
+python src/part1_pipeline.py
 ```
-*Note: Ensure the dataset files (`dataset_7.csv`, `target_7.csv`, `EVAL_7.csv`) are correctly placed in the `problem_7` folder within `scr_code` before execution.*
+*Note: Ensure the dataset files are correctly placed in `src/problem_7/` or updated in the script before execution.*
 
 ### Running Part 2 (Edge Implementation)
 The edge-device script can be run without any external ML libraries. To generate predictions using the rule-based framework:
 ```bash
-python ML_project_7/scr_code/framework_7.py --eval_file_path <path_to_eval_csv>
+python src/framework_7.py --eval_file_path <path_to_eval_csv>
 ```
 
 ### Rule Extraction
 To print the evaluation metrics and extracted rules for Part 2, execute:
 ```bash
-python ML_project_7/scr_code/rule_extractor.py
+python src/rule_extractor.py
 ```
 
 ## AI Disclosure

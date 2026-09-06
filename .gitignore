@@ -1,0 +1,8 @@
+*.csv
+*.bin
+*.joblib
+*.zip
+__pycache__/
+*.ipynb_checkpoints/
+.DS_Store
+catboost_info/
